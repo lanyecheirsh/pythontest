@@ -39,37 +39,76 @@ time.sleep(2)
 
 #综合查询
 driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/div[2]/button').send_keys(Keys.F2)
+time.sleep(1)
 #查询
 driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/div[2]/div/div/div/div[2]/div/button[1]').click()
-time.sleep(2)
+time.sleep(1)
 
 #修改
 driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[2]').click()
+time.sleep(1)
 driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[2]/div/button[1]').click()
-time.sleep(2)
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[2]/div/button[1]').click()
+time.sleep(1)
 
 #新增
-driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[1]').click()
-time.sleep(2)
-text = driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/h3/span[1]').text
-print(text)
-driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[2]/div/button[1]').click()
+#time.sleep(1)
+#text = driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/h3/span[1]').text
+#print(text)
+#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[2]/div/button[1]').click()
 
-#订货价
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[1]/div/div[5]/input').clear()
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[1]/div/div[5]/input').send_keys("1")
-#订货天数
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[1]/div/div[6]/input').clear()
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[1]/div/div[6]/input').send_keys("1")
-#esc
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[3]/div/div/div[2]/div/button[1]').send_keys(Keys.ESCAPE)
+#删除
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[2]/div/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[1]/label/span').click()
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[3]').click()
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="app"]/div[6]/div/div/div[2]/button[2]').send_keys(Keys.ESCAPE)
 
+#批量调价
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[4]').click()
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[5]/div/div/div[2]/div/button[1]').click()
 
-#delete
+#批量调天数
 #driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[2]/div/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[1]/label/span').click()
-#driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[3]').click()
-#driver.find_element_by_xpath('//*[@id="app"]/div[6]/div/div/div[2]/button[2]').send_keys(Keys.ESCAPE)
+time.sleep(1)
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[5]').click()
+time.sleep(1)
+text = driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[6]/div/div/h3').text
+print(text)
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[6]/div/div/div[2]/div/button[1]').click()
+time.sleep(2)
+
+#全部删除
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[6]').click()
+time.sleep(1)
+text = driver.find_element_by_xpath('//*[@id="app"]/div[6]/div/div/div[1]').text
+print(text)
+driver.find_element_by_xpath('//*[@id="app"]/div[6]/div/div/div[2]/button[2]').click()
+
+#调整历史
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/button[7]').click()
+time.sleep(1)
+text = driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[8]/div/div/h3/span[1]').text
+print(text)
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[8]/div/div/div[2]/div/button').click()
+time.sleep(1)
+#下载模板
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/ul/li[1]/a/img').click()
+time.sleep(3)
+#导入
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/ul/li[2]/img').click()
+time.sleep(1)
+text = driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[4]/div/div/h3/span[1]').text
+print(text)
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[4]/div/div/div[2]/div/button').click()
+time.sleep(1)
+#导出
+driver.find_element_by_xpath('//*[@id="app"]/div[4]/div/div[1]/ul/li[3]/img').click()
+
+
+
+
+time.sleep(5)
+driver.quit()
 
 
 
